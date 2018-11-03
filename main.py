@@ -48,35 +48,6 @@ class Vertex:
 
 
 def solve(vertex, solution):
-    """
-    TODO: Change algorithm from O(4^n) to O(n^4) or better.
-
-    Potentially a selection sort, where if the swap index falls on the MARKER
-    then do a shift.
-
-    1 2
-    3 *
-
-    * 1 3 2
-
-    * 1
-    3 2
-
-
-    3 1 * 2             1 * 3 2
-
-    3 1                 1 *
-    * 2                 3 2
-
-    3 1                 1 2
-    2 *                 3 *
-
-    3 *
-    2 1
-
-    * 3
-    2 1
-    """
     candidates = []
     visited, queue = set(), collections.deque([vertex])
 
