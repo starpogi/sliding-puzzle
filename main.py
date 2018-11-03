@@ -175,14 +175,13 @@ def find_moves(vertex):
 
     return moves
 
-vertex = Vertex([1, 2, 3, 4, MARKER, 5, 7, 8, 6])
+vertex = Vertex([1, 2, 3, 4, MARKER, 5, 6, 7, 8])
 solutions = sorted([show_path(path)
                     for path in solve(vertex, [1, 2, 3, 4, 5, 6, 7, 8, MARKER])],
                    key=lambda x: len(x))
 
-for solution in solutions:
-    print("Solution!")
-    for n in reversed(solution):
+if solutions:
+    for n in reversed(solutions[0]):
         print("-------")
         print(n.pretty)
         print("-------\n   |    \n   V    \n")
